@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VANTAGE: Rideshare Price Intelligence</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="index.html">VANTAGE<span>.</span></a>
+    <ul>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#customer">Customer</a></li>
+      <li><a href="#problem">Problem</a></li>
+      <li><a href="#solution">Solution</a></li>
+      <li><a href="#scope">Scope</a></li>
+      <li><a href="#stakeholders">Stakeholders</a></li>
+      <li><a href="#covenants">Covenants</a></li>
+      <li><a href="#milestones">Milestones</a></li>
+      <li><a href="interviews.html">Interviews</a></li>
+      <li><a href="critiques.html">Critiques</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="eyebrow">✦ Project Charter, Milestone 01</div>
+  <h1>VANTAGE<span>.</span></h1>
+  <p class="tagline">One dark window into every ride on the road. Helping UT students compare Uber, Lyft, Fetii, and robotaxi options before they book, not after they've opened three apps.</p>
+  <p class="caveat">Whether that comparison runs on live prices depends on data access we have not confirmed yet. See <a href="#scope">Scope</a> for the open risk and the fallback plan.</p>
+  <div class="badge-row">
+    <span class="badge">UT Austin</span>
+    <span class="badge">Rideshare</span>
+    <span class="badge">Price Intelligence</span>
+    <span class="badge">Contextual Design</span>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <section id="team">
+    <div class="sec-head"><span class="sec-num">01</span><h2>The Team</h2></div>
+    <div class="grid">
+      <div class="card">
+        <div class="avatar filled">
+          <img src="images/nidhi-kiran.jpg" alt="Nidhi Kiran">
+        </div>
+        <h3>Nidhi Kiran</h3>
+        <div class="role">Group Leader &amp; Website Maker</div>
+        <p>Build/organize website, add team information, write team expectations/covenants and grounds for expulsion, create a reusable Critique/Feedback section.</p>
+      </div>
+      <div class="card">
+        <div class="avatar filled">
+          <img src="images/vibha-datla.jpg" alt="Vibha Datla">
+        </div>
+        <h3>Vibha Datla</h3>
+        <div class="role">Customer &amp; Problem</div>
+        <p>Define the target customer, write the problem statement, identify key pain points, articulate the core user insight and design opportunity.</p>
+      </div>
+      <div class="card">
+        <div class="avatar filled">
+          <img src="images/ashvin-jayanthi.jpg" alt="Ashvin Jayanthi">
+        </div>
+        <h3>Ashvin Jayanthi</h3>
+        <div class="role">Stakeholders &amp; Scope</div>
+        <p>Map stakeholders and their goals/worries, define what's in and out of scope, flag the project's main risk.</p>
+      </div>
+      <div class="card">
+        <div class="avatar filled">
+          <img src="images/zach-smith.jpg" alt="Zach Smith">
+        </div>
+        <h3>Zach Smith</h3>
+        <div class="role">Solution Direction &amp; Research</div>
+        <p>Draft the solution direction, plan the interview and diary research, run the trip-timing test, define pivot criteria.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="customer">
+    <div class="sec-head"><span class="sec-num">02</span><h2>The Customer</h2></div>
+    <div class="attrib">By Vibha Datla (Person 2)</div>
+    <div class="stack">
+      <div class="panel">
+        <h3>Target Customer</h3>
+        <p style="color:var(--accent); font-weight:600; margin-bottom:18px;">Long-term, this is for college students and young adults in urban areas generally. Right now, we are narrowing to Austin and UT students specifically. That's who we're interviewing and designing the first version for.</p>
+        <p>Our primary customers are college students and young adults in urban areas who regularly rely on rideshare services but do not have a strong preference for one provider. They are comfortable using multiple transportation apps, including Uber, Lyft, Fetii, and newer autonomous ride options, and their choice often depends on what makes the most sense for a particular trip.</p>
+        <h4>More specifically, we are designing for riders who:</h4>
+        <ul>
+          <li>Use rideshare when walking, public transit, or driving themselves is inconvenient or unavailable.</li>
+          <li>Are price-conscious, but still care about factors such as pickup time, trip duration, vehicle type, and convenience.</li>
+          <li>Have multiple transportation apps installed or are willing to use different services when there is a meaningful benefit.</li>
+          <li>Often make transportation decisions under time pressure, getting to class, work, the airport, dinner, an event, or home at night.</li>
+          <li>Live in markets where several traditional and emerging transportation services compete for the same trip.</li>
+        </ul>
+        <p>A useful example: a college student trying to get from campus to the airport. They may be willing to take whichever reliable service offers the best combination of price and arrival time, rather than automatically choosing Uber or Lyft.</p>
+      </div>
+      <div class="panel">
+        <h3>Customer Need</h3>
+        <p>As rideshare becomes more fragmented across traditional rideshare companies, group transportation services, and autonomous vehicles, customers are increasingly responsible for figuring out which service is best for each individual trip.</p>
+        <p>Currently, much of that comparison happens manually. A rider opens one app, enters the destination, remembers the quoted fare and wait time, switches to another app, enters or confirms the same trip, compares the results, and potentially repeats the process with additional providers. By the time the rider makes a decision, some of that information may already have changed. So the customer needs a better way to compare ride details across multiple platforms more efficiently.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="problem">
+    <div class="sec-head"><span class="sec-num">03</span><h2>The Problem</h2></div>
+    <div class="attrib">By Vibha Datla (Person 2)</div>
+    <div class="stack">
+      <div class="callout">
+        Price-conscious rideshare users need an efficient way to evaluate competing transportation options for the same trip because fares, availability, pickup times, and service types are scattered across separate platforms, making it unnecessarily difficult to determine which option provides the best value at the moment they need a ride.
+      </div>
+
+      <div class="panel">
+        <h3>Key Pain Points</h3>
+        <div class="grid">
+          <div class="card">
+            <h3>1. Comparing rides takes too much time</h3>
+            <p>Users open multiple apps, enter the same destination, and compare prices and wait times manually. Because fares and availability change quickly, the information they compare may already be outdated by the time they choose.</p>
+          </div>
+          <div class="card">
+            <h3>2. Lowest price isn't always the best option</h3>
+            <p>Users weigh more than cost. A slightly more expensive ride may be worth it if it arrives significantly faster, and group size, urgency, and reliability all affect which option provides the best value.</p>
+          </div>
+          <div class="card">
+            <h3>3. Better options go unnoticed</h3>
+            <p>Most riders only check the services they already use. As options expand beyond Uber and Lyft to services like Fetii and robotaxis, users may miss a cheaper or more convenient option simply because they don't know to check it.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel">
+        <h3>Why This Problem Matters</h3>
+        <p>Rideshare users make these decisions repeatedly, so small differences in price, wait time, and convenience add up over time. Having more transportation services should give riders more choice, but that benefit is limited when the information is scattered across separate apps.</p>
+        <p>Users currently have to choose between spending extra time comparing rides or choosing quickly and potentially paying more or waiting longer. Making that comparison easier would help riders make faster, more informed transportation decisions while also making newer or less familiar services easier to discover.</p>
+      </div>
+
+      <div class="panel">
+        <h3>Core User Insight</h3>
+        <p>Riders are not loyal to the process of booking a ride. They are trying to accomplish a larger task: getting somewhere with the least acceptable combination of cost, waiting, uncertainty, and effort.</p>
+        <p>This distinction matters for our project. Instead of treating the customer as an "Uber user" or "Lyft user," we treat them as a <em>transportation shopper</em> whose preferred provider can change from trip to trip.</p>
+      </div>
+
+      <div class="panel">
+        <h3>Design Opportunity</h3>
+        <p>The opportunity is to reduce the effort required for users to identify the transportation option that best fits their needs.</p>
+        <p>Our research should investigate how riders currently make this decision, what information they actually compare, when they decide further comparison is no longer worth the effort, and which factors beyond price influence their final choice.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="solution">
+    <div class="sec-head"><span class="sec-num">04</span><h2>Solution Direction &amp; Research</h2></div>
+    <div class="attrib">By Zach Smith (Person 4)</div>
+    <div class="stack">
+      <div class="panel">
+        <h3>Solution Direction</h3>
+        <p>We want to help UT students compare their ride options in one place before they book. Right now that means opening Uber, then Lyft, then maybe Fetii, checking three price screens and three wait times, and picking whatever seems least bad. We are exploring what it looks like to do that once instead of three times.</p>
+        <p>We are not committing to a format yet. It could be an app, a web tool, a browser extension, or something that lives inside a group chat while people are deciding. That should come out of research.</p>
+      </div>
+
+      <div class="panel">
+        <h3>Why This Is Worth Looking At</h3>
+        <p>Austin has more ride options than most cities, and they do not live in the same place. Waymo rides appear inside the Uber app. Tesla's robotaxi needs its own app, only runs in part of the city, and currently stops service around 10 PM. Fetii is separate again, and is what people default to for groups. A student getting from West Campus to Rainey at 11 PM on a Friday is comparing across apps that were never built to be compared.</p>
+        <p>Cost matters more for this group than it would for a general audience. Students are price sensitive, and a lot of these trips get split four or five ways, which changes which option actually wins.</p>
+      </div>
+
+      <div class="panel">
+        <h3>What Already Exists</h3>
+        <p>Uber vs. Lyft price comparison tools have been around for years and mostly did not stick. Part of our research is figuring out why. My guess is they only covered two services, the prices went stale fast, and you still had to leave the tool to book. Worth confirming instead of assuming.</p>
+      </div>
+
+      <div class="panel">
+        <h3>Research Plan</h3>
+        <p>Six to eight short interviews with UT students who take rides at least a couple times a week. Mix of people living in West Campus and people commuting in from farther out.</p>
+        <h4>What I want to find out</h4>
+        <ul>
+          <li>How people decide right now, and how many apps they actually open</li>
+          <li>What they are optimizing for: price, wait time, safety, or ease of splitting</li>
+          <li>Who makes the call in a group, and how the money gets sorted out after</li>
+          <li>When someone gives up comparing and just books whatever is fastest</li>
+        </ul>
+        <p>On top of interviews, a short diary exercise: ask a few people to send screenshots of their last five rides with the price and a line on how they chose. People are bad at remembering what they actually paid.</p>
+        <p>We should also book the same trip four ways ourselves and time how long comparing takes. If it turns out to be thirty seconds, the problem is weaker than we think, and we want to know that early.</p>
+      </div>
+
+      <div class="pivot-box">
+        <h3>What Would Make Us Change Direction</h3>
+        <p>If interviews show students are loyal to one app and rarely compare, then comparison is not the problem. In that case we would pivot toward group splitting or late-night reliability.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="scope">
+    <div class="sec-head"><span class="sec-num">05</span><h2>Scope</h2></div>
+    <div class="attrib">By Ashvin Jayanthi (Person 3)</div>
+    <p style="color:var(--text-dim); margin-top:-14px; margin-bottom:26px; max-width:640px;">In Holtzblatt, Wendell, and Wood's terms, this is a market characterization project for a new system concept, not a usability fix or a redesign of something that already exists. That is why this milestone is research and scope rather than screens: the job right now is finding out whether the concept holds up before we design toward it.</p>
+    <div class="stack">
+      <div class="split">
+        <div class="panel">
+          <h3>In Scope</h3>
+          <ul>
+            <li>Research on how students choose now: interviews, diary exercise, and our own timed test of booking the same trip several ways</li>
+            <li>Concept and interaction design taken far enough to test</li>
+            <li>At least one round of usability testing</li>
+            <li>Critique summaries after each milestone</li>
+          </ul>
+        </div>
+        <div class="panel">
+          <h3>Out of Scope</h3>
+          <ul>
+            <li>A working product that pulls live prices and books rides</li>
+            <li>Live pricing integration, since Uber and Lyft have restricted their public price endpoints and the others are unlikely to be more open</li>
+            <li>Payment and splitting, or anything touching accounts and credentials</li>
+            <li>Non-UT audiences, other cities, the driver side, and other transit modes unless students treat them as real substitutes</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pivot-box">
+        <h3>Main Risk</h3>
+        <p>If we cannot get price data legitimately, a comparison tool cannot exist in the form we are imagining. Worth settling in the first two weeks. The workarounds are letting users enter what they are already seeing, or shifting focus from live prices to the decision and the split. We would rather name this now than design six weeks of screens around a feature that cannot exist, and the rest of the site should carry the same caveat so our pitch does not promise something our own risk section rules out.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="stakeholders">
+    <div class="sec-head"><span class="sec-num">06</span><h2>Stakeholder Analysis</h2></div>
+    <div class="attrib">By Ashvin Jayanthi (Person 3)</div>
+
+    <details class="stakeholder" open>
+      <summary>UT Students (Riders)</summary>
+      <div class="stakeholder-body">
+        <div><h4>Goals</h4><p>Getting somewhere at a reasonable price without opening three apps first.</p></div>
+        <div><h4>Worries</h4><p>Overpaying because they checked the wrong app, waiting longer than expected at night, and fronting money for a group they then have to collect from.</p></div>
+        <div><h4>Ideas: existing rules of thumb</h4><p>Most already have one, like always checking Uber first or defaulting to Fetii above a certain group size. Surfacing those is a research goal, since a tool that fights how people already decide will not get used.</p></div>
+        <div><h4>How to involve</h4><p>Interviews and the diary exercise now; prototype testing later with the same people we interviewed.</p></div>
+        <div><h4>Communicating progress to them</h4><p>Tell participants what we did with what they told us in those sessions. It doubles as a check on whether we understood them correctly.</p></div>
+        <div><h4>How they communicate / how to present design</h4><p>They talk in specifics, not generalities. "Walk me through your last ride" beats "what do you look for in a rideshare app." Same for design: a screen they can react to, not a description of a system.</p></div>
+        <div class="callout-cell"><h4>Sub-stakeholder to watch: the group payer</h4><p>Within this group, the person who ends up booking for four or five people is worth calling out separately. They are deciding fast with people waiting on them, and they are out of pocket until everyone pays them back. If research says the money and the coordination hurt more than the comparison does, they become the center of the project rather than a subset of it.</p></div>
+      </div>
+    </details>
+
+    <details class="stakeholder">
+      <summary>Uber, Lyft, Fetii &amp; Robotaxi Operators</summary>
+      <div class="stakeholder-body">
+        <div><h4>Relationship</h4><p>Stakeholders we are affected by but do not work with.</p></div>
+        <div><h4>Goals</h4><p>Keep riders inside their own app.</p></div>
+        <div><h4>Worries</h4><p>A tool that lines their price up against a cheaper option is against their interest.</p></div>
+        <div><h4>Ideas</h4><p>None to contribute, since we are not in contact with them.</p></div>
+        <div><h4>How to involve / communicating progress</h4><p>We are not in contact with them, so there is no progress to report.</p></div>
+        <div><h4>How to communicate design</h4><p>If we ever needed to, it would be through whatever public terms of service they publish, not a conversation.</p></div>
+        <div><h4>How we approach them</h4><p>We should not plan around cooperation we will not get.</p></div>
+      </div>
+    </details>
+
+    <details class="stakeholder">
+      <summary>UT Parking &amp; Transportation / SURE Walk</summary>
+      <div class="stakeholder-body">
+        <div><h4>Role</h4><p>Context rather than a partner right now.</p></div>
+        <div><h4>Goals</h4><p>Already care about students getting home safely at night.</p></div>
+        <div><h4>Worries</h4><p>A tool that pulls students away from services the university funds.</p></div>
+        <div><h4>When they become a stakeholder</h4><p>Only if the project drifts toward late-night reliability.</p></div>
+        <div><h4>How to involve / communicating progress</h4><p>If it happens, a short written request, with progress reported the same way.</p></div>
+        <div><h4>Otherwise</h4><p>None of these points apply at this scope.</p></div>
+      </div>
+    </details>
+
+    <details class="stakeholder">
+      <summary>Drivers</summary>
+      <div class="stakeholder-body">
+        <div><h4>Goals</h4><p>Steady fares.</p></div>
+        <div><h4>Worries</h4><p>Demand moving between platforms.</p></div>
+        <div><h4>Role</h4><p>Affected by anything that shifts demand between platforms, but not who we are serving. Saying that plainly is better than claiming to serve everyone.</p></div>
+        <div><h4>How to involve / communicate</h4><p>We do not involve them, report to them, or design for them.</p></div>
+      </div>
+    </details>
+
+    <details class="stakeholder">
+      <summary>Course Instructor &amp; Classmates (Critique Panel)</summary>
+      <div class="stakeholder-body">
+        <div><h4>Goals</h4><p>Seeing us apply the method.</p></div>
+        <div><h4>Worries</h4><p>A team that ignores feedback.</p></div>
+        <div><h4>How to involve</h4><p>The milestone critiques.</p></div>
+        <div><h4>Communicating progress to them</h4><p>Through the site itself.</p></div>
+        <div><h4>How to communicate design</h4><p>Presented work plus a written response to what they said.</p></div>
+      </div>
+    </details>
+  </section>
+
+  <section id="covenants">
+    <div class="sec-head"><span class="sec-num">07</span><h2>Group Covenants</h2></div>
+    <div class="attrib">By Ashvin Jayanthi (Person 3)</div>
+    <ol class="covenants">
+      <li>Everyone owns a named section of each milestone and delivers it.</li>
+      <li>Internal deadlines run 48 hours ahead of the Canvas deadline.</li>
+      <li>The group chat is the only coordination channel; a decision made one on one gets repeated there.</li>
+      <li>24 hour response window on weekdays. Acknowledgment is enough.</li>
+      <li>Flag a miss before the deadline, not after.</li>
+      <li>Everyone attends presentations and critiques unless they flag a conflict in advance.</li>
+      <li>One other person reviews work before it goes on the site.</li>
+      <li>Disagreements settled by discussion, then majority; once decided, we build on it.</li>
+    </ol>
+
+    <div class="panel" style="margin-top:26px;">
+      <h3>Escalation</h3>
+      <p>Escalation runs in three steps: raise it in the chat, then talk as a group about reassigning work, then notify the instructor in writing.</p>
+    </div>
+
+    <div class="expulsion-box">
+      <h3>Grounds for Expulsion</h3>
+      <ul>
+        <li>Missing two internal deadlines without warning</li>
+        <li>Going silent for seven days during an active milestone</li>
+        <li>Missing a presentation without telling anyone</li>
+        <li>Fabricating or plagiarizing work, including invented interview data</li>
+        <li>Taking credit for work you did not do</li>
+      </ul>
+      <p>Expulsion requires a unanimous vote of the remaining members and written notice to the instructor. The person gets to state their side first.</p>
+    </div>
+
+    <div class="sign-row">
+      <div class="sign-box">Nidhi Kiran, Agreed 9/13/26</div>
+      <div class="sign-box">Vibha Datla, Agreed 9/13/26</div>
+      <div class="sign-box">Ashvin Jayanthi, Agreed 9/13/26</div>
+      <div class="sign-box">Zach Smith, Agreed 9/13/26</div>
+    </div>
+  </section>
+
+  <section id="milestones" style="border-bottom:none;">
+    <div class="sec-head"><span class="sec-num">08</span><h2>Milestones &amp; Critique Log</h2></div>
+
+    <div class="panel" style="margin-bottom:30px;">
+      <h3>Critique Process</h3>
+      <p style="margin-bottom:0;">Two people take notes at each critique, one on substance and one on who said what. Within 48 hours it goes on the site with three parts: the critique, what we did about it, and if we did not act, why. Critiques we disagreed with still get listed. The person who owned the section writes the response, and the write-up role rotates.</p>
+    </div>
+
+    <p style="color:var(--text-dim); margin-top:-14px; margin-bottom:26px;">Repeatable template: duplicate the block below for every milestone, present it in class, then fill in the critique summary within 48 hours.</p>
+
+    <div class="milestone">
+      <div class="m-head">
+        <h3>Milestone 01: Team &amp; Problem Charter</h3>
+        <span class="m-status">Presented [date]</span>
+      </div>
+      <h4>What we presented</h4>
+      <p>Team, target customer, problem statement, a solution direction plus research plan for helping UT students compare Uber, Lyft, Fetii, and robotaxi options for the same trip, project scope, stakeholder analysis, and group covenants.</p>
+      <h4>Critique summary</h4>
+      <ul>
+        <li><span class="placeholder">[Classmate/instructor point #1: what they questioned or pushed back on]</span></li>
+        <li><span class="placeholder">[Point #2]</span></li>
+        <li><span class="placeholder">[Point #3]</span></li>
+      </ul>
+      <h4>How we're responding</h4>
+      <p><span class="placeholder">[What the team will change/investigate before the next milestone based on the above]</span></p>
+    </div>
+
+    <div class="cta-card">
+      <h3>Have a critique on this milestone</h3>
+      <p>Submit it on the Critiques page. Once we have reviewed it, we will publish the write-up here as Milestone 02, following the same three-part format as the example above.</p>
+      <a class="btn" href="critiques.html">Go to Critiques</a>
+    </div>
+  </section>
+
+</div>
+
+<footer>VANTAGE: Rideshare Price Intelligence, Contextual Design Project</footer>
+
+</body>
+</html>
